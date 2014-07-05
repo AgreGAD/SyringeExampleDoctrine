@@ -1,0 +1,15 @@
+Player:
+  type: entity
+  table: players
+  id:
+    id:
+      type: integer
+      generator:
+        strategy: AUTO
+  fields:
+    login:
+      type: string
+    passport:
+      type: string
+    email:
+      type: string

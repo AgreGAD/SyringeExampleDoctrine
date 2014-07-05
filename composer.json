@@ -1,0 +1,29 @@
+{
+    "name": "syringe/example-mvc",
+    "type": "library",
+    "description": "Syringe Example MVC",
+    "keywords": ["Syringe", "Example"],
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Marat Fakhertdinov",
+            "email": "marat.fakhertdinov@gmail.com"
+        }
+    ],
+    "repositories": [
+        {
+            "type": "vcs",
+            "url": "git@github.com:AgreGAD/Syringe.git"
+        }
+    ],
+    "require": {
+        "php": ">=5.3.3",
+        "syringe/dependency-injection": "dev-master",
+        "doctrine/orm": "*"
+    },
+    "autoload": {
+        "psr-0": {
+            "": "src/"
+        }
+    }
+}
