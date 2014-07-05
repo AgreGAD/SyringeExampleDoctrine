@@ -10,12 +10,6 @@
             "email": "marat.fakhertdinov@gmail.com"
         }
     ],
-    "repositories": [
-        {
-            "type": "vcs",
-            "url": "git@github.com:AgreGAD/Syringe.git"
-        }
-    ],
     "require": {
         "php": ">=5.3.3",
         "syringe/dependency-injection": "dev-master",
