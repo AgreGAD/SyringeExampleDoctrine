@@ -9,14 +9,23 @@ doctrine.db_parameters:
 
 services:
   doctrine.setup_configuration:
-    factoryStaticMethod: ['Doctrine\ORM\Tools\Setup', 'createAnnotationMetadataConfiguration']
-    arguments: ['%doctrine.configuration_paths%']
+    factoryStaticMethod:
+      - 'Doctrine\ORM\Tools\Setup'
+      - 'createAnnotationMetadataConfiguration'
+    arguments:
+      - '%doctrine.configuration_paths%'
 
   doctrine.entity_manager:
-    factoryStaticMethod: ['Doctrine\ORM\EntityManager', 'create']
-    arguments: ['%doctrine.db_parameters%', '@doctrine.setup_configuration']
+    factoryStaticMethod:
+      - 'Doctrine\ORM\EntityManager'
+      - 'create'
+    arguments:
+      - '%doctrine.db_parameters%'
+      - '@doctrine.setup_configuration'
     alias: doctrine
 
   doctrine.connection:
-    factoryMethod: ['@doctrine.entity_manager', 'getConnection']
+    factoryMethod:
+      - '@doctrine.entity_manager'
+      - 'getConnection'
     alias: db_connection
