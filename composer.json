@@ -1,7 +1,7 @@
 {
-    "name": "syringe/example-mvc",
+    "name": "syringe/example-doctrine",
     "type": "library",
-    "description": "Syringe Example MVC",
+    "description": "Syringe Example Doctrine",
     "keywords": ["Syringe", "Example"],
     "license": "MIT",
     "authors": [
