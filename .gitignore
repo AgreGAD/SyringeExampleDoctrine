@@ -2,3 +2,4 @@
 /.idea
 /vendor
 /app/runtime/*
+composer.lock
