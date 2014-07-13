@@ -1,12 +1,11 @@
 <?php
 
-use Syringe\Component\DI\Container;
+use Syringe\Component\DI\Builder\SyringeBuilder;
 
 require_once __DIR__.'/vendor/autoload.php';
 
-$configListFile = __DIR__ . '/app/configuration_files.php';
-$appConfigFile  = __DIR__ . '/app/runtime/appconfig.php';
+$configFile = __DIR__ . '/config/config.yml';
+$output     = __DIR__ . '/config/appconfig.php';
 
 // build configuration
-$builderConfiguration = require __DIR__ . '/vendor/syringe/dependency-injection/Syringe/Component/DI/Builder/config.php';
-(new Container($builderConfiguration))->get('container.configuration.builder')->run($configListFile, $appConfigFile);
+SyringeBuilder::build($configFile, $output);
