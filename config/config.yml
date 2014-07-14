@@ -1,4 +1,4 @@
-doctrine.configuration_paths: ['app/config/doctrine']
+doctrine.configuration_paths: ['config/doctrine']
 
 doctrine.db_parameters:
   driver:   'pdo_mysql'
